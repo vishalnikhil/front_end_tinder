@@ -10,7 +10,10 @@ const Body = () => {
     <div>
     {/* navbar is always loaded and then after its children route using outlet */}
        <Navbar/>
+
        <Outlet/>  
+       {/* any childrens of route whose parent is the body will be render using outleb like login page */}
+
        <Footer/>
       
     </div>

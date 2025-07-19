@@ -20,14 +20,19 @@ function App() {
            
             <Routes>
 
-              <Route path='/' element={<Body/>}>
-              <Route path='/login' element={<Login/>}  />   
-              {/* yeh element mein kisi component ko pass kr skta hai jb bhi login route hoga yeh page load ho jayega */}
+              <Route path='/' element={<Body/>}></Route> 
+                {/* above is parent route */}
 
+
+
+
+            {/* these 2 are childrens routes body component mein outlet dena parega for these child route to render */}
+              <Route path='/login' element={<Login/>}  />   
+            
               <Route path='/Profile' element={<Profile/>} />
 
 
-              </Route>
+              
               
               
             </Routes>
