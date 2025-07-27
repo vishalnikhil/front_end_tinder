@@ -11,6 +11,8 @@ const Login = () => {
   const [emailId, setEmailId] = useState("vishalnikhil2002@gmail.com")
   const [password, setPassword] = useState("Nikhil@143")
 
+  const [error,seterror]=useState();
+
   const dispatch = useDispatch();
   const navigate=useNavigate();
  
@@ -28,6 +30,8 @@ const Login = () => {
       dispatch(addUser(res.data)); //dispatched an action here data gets addeded in the store 
       navigate('/')
     } catch (err) {
+
+        seterror(err.response.data);
       console.log(err)
     }
   }
@@ -58,6 +62,11 @@ const Login = () => {
                 className="input w-full"
               />
             </fieldset>
+          </div>
+
+          <div>
+
+            <p className='text-red-500'>{error}</p>
           </div>
 
           <div className="card-actions flex justify-center">
