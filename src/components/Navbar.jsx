@@ -64,7 +64,10 @@ const Navbar = () => {
                                     <span className="badge">New</span>
                                 </Link>
                             </li>
-                            <li><a>Settings</a></li>
+                            <li>
+                                <Link to={'/connections'}>Connections</Link>
+                                
+                                </li>
                             <li>
                                 {user ? ( // Conditionally render Login or Logout
                                     <button onClick={handleLogout}>Logout</button>

@@ -34,7 +34,7 @@ const Body = () => {
     
       navigate('/login')
       
-    // console.log(err);
+    console.log(err);
   }
 
 }
