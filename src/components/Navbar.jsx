@@ -39,7 +39,7 @@ const Navbar = () => {
         <div>
             <div className="navbar bg-base-300 shadow-sm">
                 <div className="flex-1">
-                    <a className="btn btn-ghost text-xl"> 😊 DevTinder</a>
+                    <Link to="/" className="btn btn-ghost text-xl"> 😊 DevTinder</Link>
                 </div>
                 <div className="flex gap-2">
                     <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
@@ -47,7 +47,7 @@ const Navbar = () => {
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             {user && ( // Only show avatar if user is logged in
                                 <div className="w-10 rounded-full">
-                                    <img
+                                    <img 
                                         alt="User Avatar"
                                         src="https://media.licdn.com/dms/image/v2/D5603AQHsyVarYIrhXg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719959067503?e=2147483647&v=beta&t=xYhm7cPg_tKOpFVvd0AgO7qkECf_L6yYen96OIj5Spk"
                                     />
@@ -59,10 +59,10 @@ const Navbar = () => {
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
                         >
                             <li>
-                                <a className="justify-between">
+                                <Link to="/profile" className="justify-between">
                                     Profile
                                     <span className="badge">New</span>
-                                </a>
+                                </Link>
                             </li>
                             <li><a>Settings</a></li>
                             <li>

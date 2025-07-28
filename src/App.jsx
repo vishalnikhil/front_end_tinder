@@ -29,8 +29,8 @@ function App() {
                  <Route path='/' element={<Feed />} /> 
               <Route path='/login' element={<Login />} />   {/* ✅ changed from /login to login */}
                <Route path='/profile' element={<Profile />} /> {/* ✅ changed from /Profile to profile */}
-               {/* <Route path='/feed' element={<Feed/>}/> */}
-              {/* ✅ optional: placeholder for root index */}
+              <Route path='/connections' element={<Profile />} />
+              <Route path='/requests' element={<Profile />} />
             </Route>
 
           </Routes>
