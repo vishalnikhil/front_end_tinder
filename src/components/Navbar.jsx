@@ -68,6 +68,13 @@ const Navbar = () => {
                                 <Link to={'/connections'}>Connections</Link>
                                 
                                 </li>
+
+                                  <li>
+                                <Link to="/requests" className="justify-between">
+                                     Requests
+                                   
+                                </Link>
+                            </li>
                             <li>
                                 {user ? ( // Conditionally render Login or Logout
                                     <button onClick={handleLogout}>Logout</button>
