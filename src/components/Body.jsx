@@ -10,6 +10,8 @@ import { addUser } from '../utils/userSlice'
 
 
 
+
+
 //outlet means any children routes of body will be render here
 
 const Body = () => {
