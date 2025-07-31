@@ -7,6 +7,7 @@ import { addConnections } from '../utils/connectionSlice';
 
 const Connections = () => {
   const connections = useSelector((store) => store.connections);
+  console.log(connections);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -48,7 +49,7 @@ const Connections = () => {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <img
-                    src={avatarURL}
+                    src={user.photoUrl ?user.photoUrl : avatarURL }
                     alt="Avatar"
                     className="w-14 h-14 rounded-full border border-gray-500"
                   />
@@ -58,8 +59,7 @@ const Connections = () => {
                 </div>
 
                 <p className="text-gray-300 mb-1">
-                  <span className="font-medium text-white">Age:</span> {user.age || 'N/A'}
-                  <br></br>
+                  <span className="font-medium text-white">Age:</span> {user.age || 'N/A'}<br />
                   <span className="font-medium text-white">Gender:</span> {user.gender || 'N/A'}
                 </p>
 
@@ -73,6 +73,14 @@ const Connections = () => {
                     )}
                   </ul>
                 </div>
+
+                {/* Chat Button */}
+                <button
+                  className="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm"
+                  onClick={() => navigate(`/chat/${user._id}`)}
+                >
+                  Chat
+                </button>
               </div>
             );
           })}

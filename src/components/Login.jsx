@@ -71,7 +71,11 @@ const Login = () => {
 
           <div className="card-actions flex justify-center">
             <button className="btn btn-primary" onClick={handleLogin}>Login</button>
+
+           
           </div>
+
+          <p className='cursor-pointer' onClick={()=>{navigate('/signup')}}>dont have an account ? signup </p> 
         </div>
       </div>
     </div>

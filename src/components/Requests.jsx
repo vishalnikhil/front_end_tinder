@@ -10,6 +10,7 @@ import { addRequests } from '../utils/requestSlice'; // Make sure this action is
 const Requests = () => {
     const dispatch = useDispatch();
     const requests = useSelector((store) => store.requests); // Assuming 'requests' is an array in your store
+    console.log(requests);
 
     // console.log(requests);
     const navigate = useNavigate();

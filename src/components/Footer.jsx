@@ -2,10 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
+    <div className=''>
 
 
-        <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10 fixed bottom-0">
+        <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-4 fixed bottom-0">
   <nav className="grid grid-flow-col gap-4">
     <a href='https://www.instagram.com/nikhil_vishal_/'  className="link link-hover">About us</a>
     <a className="link link-hover">Contact</a>

@@ -9,6 +9,9 @@ import appStore from './utils/appStore'
 import Feed from './components/Feed'
 import Connections from './components/Connections'
 import Requests from './components/Requests'
+import Chat from './components/Chat'
+import Signup from './components/Signup'
+import Premium from './components/Premium'
 
 function App() {
 
@@ -29,10 +32,17 @@ function App() {
              
               {/* these 2 are childrens routes body component mein outlet dena parega for these child route to render */}
                  <Route path='/' element={<Feed />} /> 
-              <Route path='/login' element={<Login />} />   {/* ✅ changed from /login to login */}
+                
+              <Route path='/login' element={<Login />} />
+                 {/* ✅ changed from /login to login */}
+
+                  <Route path='/signup' element={<Signup />} />  
+                   <Route path='/premium' element={<Premium />} />  
                <Route path='/profile' element={<Profile />} /> {/* ✅ changed from /Profile to profile */}
               <Route path='/connections' element={<Connections />} />
               <Route path='/requests' element={<Requests/>} />
+                <Route path='/chat/:targetUserId' element={<Chat/>} />
+             
             </Route>
 
           </Routes>

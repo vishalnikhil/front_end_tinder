@@ -7,6 +7,8 @@ import { BASE_URL } from '../utils/constants';
 
 const Navbar = () => {
     const user = useSelector((store) => store.user); // Subscribing to the store
+
+    // console.log(user);
     const dispatch = useDispatch(); // Get the dispatch function
     const navigate = useNavigate(); // Get the navigate function
 
@@ -39,7 +41,8 @@ const Navbar = () => {
         <div>
             <div className="navbar bg-base-300 shadow-sm">
                 <div className="flex-1">
-                    <Link to="/" className="btn btn-ghost text-xl"> 😊 DevTinder</Link>
+                    <Link to={user ? "/" : "/login"} className="btn btn-ghost text-xl"> 😊 DevTinder</Link>
+
                 </div>
                 <div className="flex gap-2">
                     <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
@@ -49,7 +52,7 @@ const Navbar = () => {
                                 <div className="w-10 rounded-full">
                                     <img 
                                         alt="User Avatar"
-                                        src="https://media.licdn.com/dms/image/v2/D5603AQHsyVarYIrhXg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719959067503?e=2147483647&v=beta&t=xYhm7cPg_tKOpFVvd0AgO7qkECf_L6yYen96OIj5Spk"
+                                        src={user.photoUrl}
                                     />
                                 </div>
                             )}
@@ -72,6 +75,13 @@ const Navbar = () => {
                                   <li>
                                 <Link to="/requests" className="justify-between">
                                      Requests
+                                   
+                                </Link>
+                            </li>
+
+                               <li>
+                                <Link to="/Premium" className="justify-between">
+                                    Premium
                                    
                                 </Link>
                             </li>

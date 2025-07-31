@@ -2,6 +2,8 @@ import React from 'react'
 
 const UserCard = ({user}) => {
 
+  //  console.log(user);
+
     
 
 
@@ -9,7 +11,7 @@ const UserCard = ({user}) => {
 <div className="card bg-base-300 w-80 shadow-sm">
   <figure>
     <img
-      src="https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
+      src={user.photoUrl}
       alt="Shoes" />
   </figure>
   <div className="card-body">
